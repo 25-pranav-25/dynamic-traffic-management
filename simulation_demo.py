@@ -305,7 +305,7 @@ while True:
     cnt2 = 0
     cnt3 = 0
     cnt4 = 0
-
+    k = 1
     a = random.randint(0, 11)
     b = random.randint(0, 11)
     c = random.randint(0, 11)
@@ -326,7 +326,7 @@ while True:
     yellow_light1.color("grey")
     yellow_light2.color("grey")
     yellow_light3.color("grey")
-    sleep(cnt1)
+    sleep(k*cnt1)
 
 # Delay 1
     green_light.color("grey")
@@ -361,7 +361,7 @@ while True:
     yellow_light1.color("grey")
     yellow_light2.color("grey")
     yellow_light3.color("grey")
-    sleep(cnt2)
+    sleep(k*cnt2)
 
 # Delay 2
     green_light.color("grey")
@@ -396,7 +396,7 @@ while True:
     yellow_light1.color("grey")
     yellow_light2.color("grey")
     yellow_light3.color("grey")
-    sleep(cnt3)
+    sleep(k*cnt3)
 
 # Delay 3
     green_light.color("grey")
@@ -431,7 +431,7 @@ while True:
     yellow_light1.color("grey")
     yellow_light2.color("grey")
     yellow_light3.color("grey")
-    sleep(cnt4)
+    sleep(k*cnt4)
 
 # Delay 4
     green_light.color("grey")
