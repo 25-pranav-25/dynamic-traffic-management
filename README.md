@@ -91,12 +91,3 @@ We use the [Top-View Vehicle Detection Image Dataset](https://www.kaggle.com/dat
 
 
 ---
-
-## ✍️ Author
-
-**Pranav** – B.Tech in Data Science & AI @ IIT Guwahati  
-> Feel free to reach out for collaboration or suggestions!
-
----
-
-Would you like this converted into a `README.md` file for immediate download?
