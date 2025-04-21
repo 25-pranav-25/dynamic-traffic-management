@@ -4,7 +4,7 @@ import cv2
 import glob
 import random
 from ultralytics import YOLO
-import matplotlib as plt
+import matplotlib.pyplot as plt
 best_model = best_model = YOLO("yolov8n.pt")
 all_images = ["all_images/cars1.jpg","all_images/cars2.jpg","all_images/cars3.jpg","all_images/cars4.jpg","all_images/cars5.jpg","all_images/cars6.jpg","all_images/cars7.jpg","all_images/cars8.jpg","all_images/cars9.jpg","all_images/cars10.jpg","all_images/cars11.jpg","all_images/cars12.jpg"]
 
@@ -41,8 +41,8 @@ def Lane1():
         img = cv2.imread(img_path)
         results = best_model.predict(source=img_path, conf=0.6, imgsz=640, verbose=False)
         vehicle_boxes = results[0].boxes
-        cnt1 += len(vehicle_boxes)
-
+        cnt1 = len(vehicle_boxes)
+        print("Vehicle Count", cnt1)
         sample_image = results[0].plot(line_width=2)
 
         # Convert the color of the image from BGR to RGB for correct color representation in matplotlib
@@ -63,16 +63,19 @@ def Lane2():
         img = cv2.imread(img_path)
         results = best_model.predict(source=img_path, conf=0.6, imgsz=640, verbose=False)
         vehicle_boxes = results[0].boxes
-        cnt2 += vehicle_boxes
-        for box in vehicle_boxes:
-            x, y, w, h = box
-            cv2.rectangle(img, (x, y), (x + w, y + h), (25, 0, 180), 3)
-            # cv2.putText(img, "Vehicles: " + str(vehicle_count), (20, 50), 0, 2, (100, 200, 0), 3)
-        print("Vehicle Count: ", results)
-        cv2.imshow("Lane2", img)
-        print("Total current count", cnt2)
-        cv2.waitKey(2000)
-        cv2.destroyAllWindows()
+        cnt2 = len(vehicle_boxes)
+        print("Vehicle Count", cnt2)
+        sample_image = results[0].plot(line_width=2)
+
+        # Convert the color of the image from BGR to RGB for correct color representation in matplotlib
+        sample_image = cv2.cvtColor(sample_image, cv2.COLOR_BGR2RGB)
+
+        # Display annotated image
+        plt.figure(figsize=(20,15))
+        plt.imshow(sample_image)
+        plt.title('Detected Objects in Sample Image by the Fine-tuned YOLOv8 Model', fontsize=20)
+        plt.axis('off')
+        plt.show()
 
 
 def Lane3():
@@ -83,16 +86,19 @@ def Lane3():
         img = cv2.imread(img_path)
         results = best_model.predict(source=img_path, conf=0.6, imgsz=640, verbose=False)
         vehicle_boxes = results[0].boxes
-        cnt3 += vehicle_boxes
-        for box in vehicle_boxes:
-            x, y, w, h = box
-            cv2.rectangle(img, (x, y), (x + w, y + h), (25, 0, 180), 3)
-            # cv2.putText(img, "Vehicles: " + str(vehicle_count), (20, 50), 0, 2, (100, 200, 0), 3)
-        print("Vehicle Count: ", results)
-        cv2.imshow("Lane3", img)
-        print("Total current count", cnt3)
-        cv2.waitKey(2000)
-        cv2.destroyAllWindows()
+        cnt3 = len(vehicle_boxes)
+        print("Vehicle Count", cnt3)
+        sample_image = results[0].plot(line_width=2)
+
+        # Convert the color of the image from BGR to RGB for correct color representation in matplotlib
+        sample_image = cv2.cvtColor(sample_image, cv2.COLOR_BGR2RGB)
+
+        # Display annotated image
+        plt.figure(figsize=(20,15))
+        plt.imshow(sample_image)
+        plt.title('Detected Objects in Sample Image by the Fine-tuned YOLOv8 Model', fontsize=20)
+        plt.axis('off')
+        plt.show()
 
 def Lane4():
     imagf = glob.glob(all_images[c])
@@ -102,16 +108,19 @@ def Lane4():
         img = cv2.imread(img_path)
         results = best_model.predict(source=img_path, conf=0.6, imgsz=640, verbose=False)
         vehicle_boxes = results[0].boxes
-        cnt4 += vehicle_boxes
-        for box in vehicle_boxes:
-            x, y, w, h = box
-            cv2.rectangle(img, (x, y), (x + w, y + h), (25, 0, 180), 3)
-            # cv2.putText(img, "Vehicles: " + str(vehicle_count), (20, 50), 0, 2, (100, 200, 0), 3)
-        print("Vehicle Count: ", results)
-        cv2.imshow("Lane4", img)
-        print("Total current count", cnt4)
-        cv2.waitKey(2000)
-        cv2.destroyAllWindows()
+        cnt4 = len(vehicle_boxes)
+        print("Vehicle Count", cnt4)
+        sample_image = results[0].plot(line_width=2)
+
+        # Convert the color of the image from BGR to RGB for correct color representation in matplotlib
+        sample_image = cv2.cvtColor(sample_image, cv2.COLOR_BGR2RGB)
+
+        # Display annotated image
+        plt.figure(figsize=(20,15))
+        plt.imshow(sample_image)
+        plt.title('Detected Objects in Sample Image by the Fine-tuned YOLOv8 Model', fontsize=20)
+        plt.axis('off')
+        plt.show()
 
 wn = turtle.Screen()
 wn.title("Traffic Lights")
