@@ -40,7 +40,8 @@ We use the [Top-View Vehicle Detection Image Dataset](https://www.kaggle.com/dat
 
 ## ⚙️ How to Run This Project
 
-### 📍 Part 1: Training the YOLOv8 Model(U can skip this step and directly download trained model from the repositry itself)
+### 📍 Part 1: Training the YOLOv8 Model
+(U can skip this step and directly download trained model from the repositry itself)
 
 1. Open the notebook [`real-time-traffic-density-estimation-with-yolov8.ipynb`](https://www.kaggle.com/code/farzadnekouei/real-time-traffic-density-estimation-with-yolov8) on Kaggle.
 2. Upload the dataset or attach it via Kaggle's "Add Data" option.
