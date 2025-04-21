@@ -26,8 +26,9 @@ This project demonstrates a real-time traffic density estimation system using a 
 ```
 ├── real-time-traffic-density-estimation-with-yolov8.ipynb  # Kaggle notebook
 ├── simulation_demo.py                                      # Traffic signal simulation with Turtle
-├── yolov8n.pt                                       # Trained YOLOv8 model
-└── some sample images and videos
+├── yolov8n.pt                                              # Trained YOLOv8 model
+├── samples                                                 # Some sample output image and videos
+├── all_images                                              # Test images
 ```
 
 ---
