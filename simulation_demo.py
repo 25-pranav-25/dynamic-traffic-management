@@ -5,7 +5,7 @@ import glob
 import random
 from ultralytics import YOLO
 import matplotlib.pyplot as plt
-best_model = best_model = YOLO("yolov8n.pt")
+best_model = YOLO("yolov8n.pt")
 all_images = ["all_images/cars1.jpg","all_images/cars2.jpg","all_images/cars3.jpg","all_images/cars4.jpg","all_images/cars5.jpg","all_images/cars6.jpg","all_images/cars7.jpg","all_images/cars8.jpg","all_images/cars9.jpg","all_images/cars10.jpg","all_images/cars11.jpg","all_images/cars12.jpg"]
 
 
